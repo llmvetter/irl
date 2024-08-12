@@ -48,6 +48,9 @@ class GridWorld:
 
         self.n_states = size**2
         self.n_actions = len(self.actions)
+        self.initial = [0]
+        self.terminal = [(size**2)-1]
+        self.reward = np.zeros(self.n_states)
 
         self.p_transition = self._transition_prob_table()
 
